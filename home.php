@@ -6,6 +6,12 @@ $user_id = $_SESSION['user_id'];
 
 if(!isset($user_id)) {
     header('location:login.php');
+};
+
+if(isset($_GET['logout'])) {
+    unset($user_id);
+    session_destroy();
+    header('location:login.php');
 }
 
 
@@ -28,8 +34,15 @@ if(!isset($user_id)) {
             if(mysqli_num_rows($select)> 0) {
                 $fetch = mysqli_fetch_assoc($select);
             }
+            if($fetch['image'] == '') {
+                echo '<img src="./images/default.png">';
+            }else {
+                echo '<img src="./uploads/'.$fetch['image'].'">';
+            }
         ?>
         <h3>Welcome back <?php echo $fetch['name']; ?>!!</h3>
+        <a href="updateProfile.php" class="btn">Update Profile</a>
+        <a href="home.php?logout=<?php echo $user_id; ?>" class="delete-btn">Logout</a>
     </div>
 </div> 
 </body>
