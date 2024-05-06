@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --blue: #3498db;
+    --dark-blue: #2980b9;
+    --red: #e74c3c;
+    --dark-red: #c0392b;
+    --black: #333;
+    --white: #fff;
+    --light-bg: #eee;
+    --box-shadow: 0 5px 10px rgba(0,0,0,.1);
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+*::-webkit-scrollbar {
+    width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: var(--blue);
+}
+
+.btn,
+.delete-btn {
+    width: 100%;
+    border-radius: 5px;
+    padding: 10px 30px;
+    color: var(--white);
+    display: block;
+    text-align: center;
+    cursor: pointer;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.btn {
+    background-color: var(--blue);
+}
+
+.btn:hover {
+    background-color: var(--dark-blue);
+}
+
+.delete-btn {
+    background-color: var(--red);
+}
+
+.delete-btn:hover {
+    background-color: var(--dark-red);
+}
+
+.form-container {
+    min-height: 100vh;
+    background-color: var(--light-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.form-container form{
+    padding: 40px 40px;
+    background-color: var(--white);
+    box-shadow: var(--box-shadow);
+    text-align: center;
+    width: 500px;
+    border-radius: 10px;
+}
+
+.form-container form h3 {
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: var(--black);
+    text-transform: uppercase;
+}
+
+.form-container form .box {
+    width: 100%;
+    border-radius: 5px;
+    padding: 12px 14px;
+    font-size: 18px;
+    color: var(--black);
+    margin: 10px 0;
+    background-color: var(--light-bg);
+}
+
+.form-container form p {
+    color: var(--black);
+    margin-top: 15px;
+}
+
+.form-container form p a {
+    color: var(--dark-blue);
+}
+
+.form-container form p a:hover {
+    color: var(--blue);
+    text-decoration: underline;
+}
