@@ -32,8 +32,7 @@ if(isset($_POST['submit'])) {
             
             if($insert) {
                 move_uploaded_file($image_tmp_name, $image_folder);
-                $message[] = 'registered successfully';
-                header('location:login.php');
+                $message[] = 'registered successfully!';
             } else{
                 $message[] = 'registration failed';
             }
